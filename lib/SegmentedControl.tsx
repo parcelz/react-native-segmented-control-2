@@ -89,8 +89,8 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
             numberOfLines={1}
             style={[
               styles.textStyle,
-              isActiveTab && { color: activeTextColor },
               textStyle,
+              isActiveTab && { color: activeTextColor },
             ]}
           >
             {tab}
