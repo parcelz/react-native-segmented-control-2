@@ -43,7 +43,6 @@
     "lint": "tslint -p tsconfig.json",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
-    "prettier": "cd lib && npx prettier --write . && git add .",
-    "prepare": "husky install"
+    "prettier": "cd lib && npx prettier --write . && git add ."
   }
 }
