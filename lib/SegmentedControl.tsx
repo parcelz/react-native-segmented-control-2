@@ -66,6 +66,12 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
     }).start();
   }, [currentIndex]);
 
+  useEffect(() => {
+    if (initialIndex !== currentIndex) {
+      setCurrentIndex(initialIndex);
+    }
+  }, [initialIndex]);
+
   const renderSelectedTab = () => (
     <Animated.View
       style={[_selectedTabStyle(tabs, activeTabColor, slideAnimation, width)]}

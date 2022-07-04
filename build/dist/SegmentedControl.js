@@ -22,6 +22,11 @@ const SegmentedControl = ({ style, tabs, width, onChange, initialIndex = 0, tabS
             useNativeDriver: true,
         }).start();
     }, [currentIndex]);
+    useEffect(() => {
+        if (initialIndex !== currentIndex) {
+            setCurrentIndex(initialIndex);
+        }
+    }, [initialIndex]);
     const renderSelectedTab = () => (<Animated.View style={[_selectedTabStyle(tabs, activeTabColor, slideAnimation, width)]}/>);
     const renderTab = (tab, index) => {
         const isActiveTab = currentIndex === index;
